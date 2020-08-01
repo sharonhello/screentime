@@ -18,12 +18,13 @@ function setup() {
 
   //background(220);
     //buttons
-     p = createP("press 's' to save image ")
-     p.position(width/2,100);
+     p = createP("Press 's' to save image ")
+     p.position(width/2,60);
+     p.style('font-size', '30px');
 
-
-     pMode = createP("Modes")
-     pMode.position(200,200);
+     pMode = createP("MODES")
+     pMode.position(200,160);
+     pMode.style('font-size', '30px');
 
   normalButton = createButton("Normal")
   normalButton.mousePressed(setNormal)
@@ -100,10 +101,13 @@ function scanMode() {
 }
 
 function pixelMode() {
-  cells = map(mouseX, 0, width, 10, 80);
-  cells = ceil(cells / 10) * 10;
+  // cells = map(mouseX, 0, width, 10, 80);
+  // cells = ceil(cells / 10) * 10;
+
+  cells = 50;
   for (let y = 0; y < img.height; y += cells) {
   for (let x = 0; x < img.width; x += cells) {
+    noStroke();
   fill(img.get(x, y));
   rect(x, y, cells, cells);
 }
