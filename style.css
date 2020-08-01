@@ -1,0 +1,16 @@
+
+body{font-family: marr sans;
+    background-color: black;
+}
+
+header {
+display: flex;
+justify-content: space-between;
+text-transform: uppercase;
+}
+h1 {font-weight: normal;}
+h1, p, a {color: white;}
+
+a {
+    text-decoration: none;
+}
