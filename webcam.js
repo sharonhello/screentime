@@ -9,7 +9,8 @@ let cells = 10;
 
 function setup() {
   cnvs = createCanvas(700, 500);
-  cnvs.position(width/2,200);
+
+  cnvs.position(width/2,150);
   pixelDensity(1);
   img = createCapture(VIDEO);
   img.size(width, height);
@@ -18,7 +19,8 @@ function setup() {
   //background(220);
     //buttons
      p = createP("press 's' to save image ")
-     p.position(width/2,140);
+     p.position(width/2,100);
+
 
      pMode = createP("Modes")
      pMode.position(200,200);
@@ -34,6 +36,24 @@ function setup() {
   pixelButton = createButton("Pixelate")
   pixelButton.mousePressed(setPixel)
   pixelButton.position(200,350);
+
+  multiplyButton = createButton("Multiply")
+  multiplyButton.mousePressed()
+  multiplyButton.position(200,400);
+
+  abcButton = createButton("ABC")
+  abcButton.mousePressed()
+  abcButton.position(200,450);
+
+  //sliders?
+  s1 = createSlider(0,100,50);
+  s1.position(1100,250);
+
+  s2 = createSlider(0,100,50);
+  s2.position(1100,300);
+
+  s3 = createSlider(0,100,50);
+  s3.position(1100,350);
 }
 //modes
 function setNormal() {
@@ -60,6 +80,7 @@ function draw() {
     pixelMode()
   }
 }
+
 //functions
 function normalMode() {
   // console.log("normal")
